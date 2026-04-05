@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用語集 | AIへの指示精度を高める</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="site-title" href="index.html">用語集</a>
+      <nav>
+        <a href="index.html" class="active">トップ</a>
+        <a href="webapp.html">Webアプリ</a>
+        <a href="it.html">IT用語</a>
+        <a href="programming.html">プログラミング</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-intro">
+    <div class="page-intro-inner">
+      <p class="page-intro__eyebrow">Glossary</p>
+      <h1>AIへの指示精度を高める用語集</h1>
+      <p class="page-intro__desc">Webアプリ・IT・プログラミングの専門用語をカテゴリ別・検索で素早く調べられます。</p>
+
+      <div class="intro-search">
+        <div class="search-wrap">
+          <input type="search" id="index-search" placeholder="全359件から横断検索...">
+        </div>
+        <p class="intro-search__hint" id="search-hint">ジャンルを選ぶか、キーワードで横断検索できます</p>
+      </div>
+
+      <div class="page-intro__stats">
+        <div class="stat">
+          <span class="stat__num">359</span>
+          <span class="stat__label">用語数</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">3</span>
+          <span class="stat__label">ジャンル</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">26</span>
+          <span class="stat__label">カテゴリ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div id="index-results" hidden>
+      <div class="result-bar">
+        <span id="index-result-count"></span>
+      </div>
+      <div id="index-result-grid"></div>
+    </div>
+
+    <div id="genre-section">
+      <div class="genre-grid">
+        <a href="webapp.html" class="genre-card">
+          <p class="genre-card__label">Genre 01</p>
+          <h2 class="genre-card__name">Webアプリ</h2>
+          <p class="genre-card__desc">UIパーツ・フォーム・レイアウト設計・状態管理・UX概念など、Webアプリ開発に関わる用語を網羅。</p>
+          <div class="genre-card__footer">
+            <span class="genre-card__count">127 件</span>
+            <span class="genre-card__arrow">→</span>
+          </div>
+        </a>
+
+        <a href="it.html" class="genre-card">
+          <p class="genre-card__label">Genre 02</p>
+          <h2 class="genre-card__name">IT用語</h2>
+          <p class="genre-card__desc">インフラ・ネットワーク・セキュリティ・クラウド・開発手法など、IT全般の基礎用語を収録。</p>
+          <div class="genre-card__footer">
+            <span class="genre-card__count">112 件</span>
+            <span class="genre-card__arrow">→</span>
+          </div>
+        </a>
+
+        <a href="programming.html" class="genre-card">
+          <p class="genre-card__label">Genre 03</p>
+          <h2 class="genre-card__name">プログラミング関連</h2>
+          <p class="genre-card__desc">基本概念・オブジェクト指向・データベース・非同期処理など、プログラミング全般の用語を収録。</p>
+          <div class="genre-card__footer">
+            <span class="genre-card__count">120 件</span>
+            <span class="genre-card__arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">用語集</span>
+      <p>&copy; 2024 用語集サイト</p>
+    </div>
+  </footer>
+
+  <script src="data/webapp-data.js"></script>
+  <script src="data/it-data.js"></script>
+  <script src="data/programming-data.js"></script>
+  <script src="js/index-search.js"></script>
+</body>
+</html>
