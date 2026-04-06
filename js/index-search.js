@@ -2,8 +2,8 @@
   'use strict';
 
   const ALL = [
-    ...WEBAPP_DATA.map(r => Object.assign({}, r, { genre: 'Webアプリ' })),
-    ...IT_DATA.map(r => Object.assign({}, r, { genre: 'IT用語' })),
+    ...WEBAPP_DATA.map(r => Object.assign({}, r, { genre: 'Webアプリ開発' })),
+    ...IT_DATA.map(r => Object.assign({}, r, { genre: 'IT用語全般' })),
     ...PROGRAMMING_DATA.map(r => Object.assign({}, r, { genre: 'プログラミング' })),
   ];
 
@@ -61,6 +61,15 @@
       filtered = filtered.filter(r =>
         r.term.toLowerCase().includes(q) || r.desc.toLowerCase().includes(q)
       );
+    }
+
+    // プログラミングジャンルでは実装例がある用語を先頭に並べる
+    if (filtered.some(r => r.codeExample)) {
+      filtered = [...filtered].sort((a, b) => {
+        if (a.codeExample && !b.codeExample) return -1;
+        if (!a.codeExample && b.codeExample) return 1;
+        return 0;
+      });
     }
 
     countEl.textContent = filtered.length + ' 件';
