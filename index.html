@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>用語集 | AIへの指示精度を高める</title>
+  <title>用語集 | AI開発における用語集</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,8 +22,8 @@
   <section class="page-intro">
     <div class="page-intro-inner">
       <p class="page-intro__eyebrow">Glossary</p>
-      <h1>AIへの指示精度を高める用語集</h1>
-      <p class="page-intro__desc">Webアプリ・IT・プログラミングの専門用語をカテゴリ別・検索で素早く調べられます。</p>
+      <h1>AI開発における用語集</h1>
+      <p class="page-intro__desc">Webアプリ・IT・プログラミングの専門用語をカテゴリ別・検索で素早く調べられます。AIへの指示例や実装例も確認できます。</p>
 
       <div class="intro-search">
         <div class="search-wrap">
@@ -31,36 +31,13 @@
         </div>
         <p class="intro-search__hint" id="search-hint">ジャンルを選ぶか、キーワードで横断検索できます</p>
       </div>
-
-      <div class="page-intro__stats">
-        <div class="stat">
-          <span class="stat__num">359</span>
-          <span class="stat__label">用語数</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">3</span>
-          <span class="stat__label">ジャンル</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">26</span>
-          <span class="stat__label">カテゴリ</span>
-        </div>
-      </div>
     </div>
   </section>
 
   <main>
-    <div id="index-results" hidden>
-      <div class="result-bar">
-        <span id="index-result-count"></span>
-      </div>
-      <div id="index-result-grid"></div>
-    </div>
-
     <div id="genre-section">
       <div class="genre-grid">
-        <a href="webapp.html" class="genre-card">
-          <p class="genre-card__label">Genre 01</p>
+        <a href="webapp.html" class="genre-card" data-genre="Webアプリ">
           <h2 class="genre-card__name">Webアプリ</h2>
           <p class="genre-card__desc">UIパーツ・フォーム・レイアウト設計・状態管理・UX概念など、Webアプリ開発に関わる用語を網羅。</p>
           <div class="genre-card__footer">
@@ -69,8 +46,7 @@
           </div>
         </a>
 
-        <a href="it.html" class="genre-card">
-          <p class="genre-card__label">Genre 02</p>
+        <a href="it.html" class="genre-card" data-genre="IT用語">
           <h2 class="genre-card__name">IT用語</h2>
           <p class="genre-card__desc">インフラ・ネットワーク・セキュリティ・クラウド・開発手法など、IT全般の基礎用語を収録。</p>
           <div class="genre-card__footer">
@@ -79,8 +55,7 @@
           </div>
         </a>
 
-        <a href="programming.html" class="genre-card">
-          <p class="genre-card__label">Genre 03</p>
+        <a href="programming.html" class="genre-card" data-genre="プログラミング">
           <h2 class="genre-card__name">プログラミング関連</h2>
           <p class="genre-card__desc">基本概念・オブジェクト指向・データベース・非同期処理など、プログラミング全般の用語を収録。</p>
           <div class="genre-card__footer">
@@ -90,12 +65,21 @@
         </a>
       </div>
     </div>
+
+    <div id="index-category-buttons"></div>
+
+    <div id="index-results">
+      <div class="result-bar">
+        <span id="index-result-count"></span>
+      </div>
+      <div id="index-result-grid"></div>
+    </div>
   </main>
 
   <footer>
     <div class="footer-inner">
       <span class="footer-brand">用語集</span>
-      <p>&copy; 2024 用語集サイト</p>
+      <p>&copy; <a href="https://www.sejuku.net/corp/" target="_blank" rel="noopener noreferrer">株式会社SAMURAI</a></p>
     </div>
   </footer>
 
