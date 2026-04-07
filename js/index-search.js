@@ -63,8 +63,8 @@
       );
     }
 
-    // プログラミングジャンルでは実装例がある用語を先頭に並べる
-    if (filtered.some(r => r.codeExample)) {
+    // ジャンル絞り込み時のみ、実装例がある用語を先頭に並べる
+    if (currentGenre && filtered.some(r => r.codeExample)) {
       filtered = [...filtered].sort((a, b) => {
         if (a.codeExample && !b.codeExample) return -1;
         if (!a.codeExample && b.codeExample) return 1;
