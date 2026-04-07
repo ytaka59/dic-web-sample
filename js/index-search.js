@@ -3,8 +3,8 @@
 
   const ALL = [
     ...WEBAPP_DATA.map(r => Object.assign({}, r, { genre: 'Webアプリ開発' })),
-    ...IT_DATA.map(r => Object.assign({}, r, { genre: 'IT用語全般' })),
     ...PROGRAMMING_DATA.map(r => Object.assign({}, r, { genre: 'プログラミング' })),
+    ...IT_DATA.map(r => Object.assign({}, r, { genre: 'IT用語全般' })),
   ];
 
   let currentGenre    = null;
@@ -254,11 +254,7 @@
     render();
   });
 
-  // 初期表示：Webアプリ開発を選択状態にする
-  currentGenre = 'Webアプリ開発';
-  genreCards.forEach(c => {
-    if (c.dataset.genre === currentGenre) c.classList.add('active');
-  });
+  // 初期表示：全件をWebアプリ開発→プログラミング関連→IT用語全般の順で表示
   buildCategoryButtons();
   render();
 })();
