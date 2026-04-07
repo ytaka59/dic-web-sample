@@ -254,7 +254,11 @@
     render();
   });
 
-  // 初期表示
+  // 初期表示：Webアプリ開発を選択状態にする
+  currentGenre = 'Webアプリ開発';
+  genreCards.forEach(c => {
+    if (c.dataset.genre === currentGenre) c.classList.add('active');
+  });
   buildCategoryButtons();
   render();
 })();
